@@ -7,7 +7,7 @@ export default class GameSavingLoader {
     try {
       const data = await read();
       const jsonData = await json(data);
-      return await new GameSaving(JSON.parse(jsonData));
+      return new GameSaving(JSON.parse(jsonData));
     } catch (error) {
       return error;
     }
